@@ -31,7 +31,7 @@
 					<li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
 				</ul>
 				<span class="navbar-text">
-					<a data-toggle="modal" data-target="#loginModal" class="btn">
+					<a class="btn" id="btnLogin">
 						<span class="fa fa-sign-in"></span> Login
 					</a>
 				</span>
@@ -85,7 +85,7 @@
 					</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
-				<div class="card card-body">
+				<div class="modal-body">
 					<form>
 						<div class="form-group row">
 							<label for="guests" class="col-md-4 col-form-label">Number of Guests</label>
@@ -175,7 +175,7 @@
 					<img src="img/logo.png" class="img-fluid">
 				</div>
 				<div class="col-12 col-sm-3 align-self-center">
-					<a role="button" class="btn btn-block nav-link btn-warning" data-target="#reserveModal" data-toggle="modal">Reserve Table</a>
+					<a role="button" class="btn btn-block nav-link btn-warning" id="btnReserve">Reserve Table</a>
 				</div>
 			</div>
 		</div>
@@ -353,24 +353,7 @@
 	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 	<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>	
-	<script>
-		$(document).ready(function(){
-			$("#mycarousel").carousel( { interval: 2000 } );			
-
-			$("#carouselButton").click(function(){
-				if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-					$("#mycarousel").carousel('pause');
-					$("#carouselButton").children("span").removeClass('fa-pause');
-					$("#carouselButton").children("span").addClass('fa-play');
-				}
-				else if ($("#carouselButton").children("span").hasClass('fa-play')){
-					$("#mycarousel").carousel('cycle');
-					$("#carouselButton").children("span").removeClass('fa-play');
-					$("#carouselButton").children("span").addClass('fa-pause');                    
-				}
-			});
-		});
-	</script>		
+	<script src="js/scripts.js"></script>
 </body>
 
 </html>
